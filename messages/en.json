@@ -1,0 +1,281 @@
+{
+  "meta": {
+    "title": "Jaime's Help Club & Digital Notary | Notary & Document Support",
+    "description": "Notary Public, FOIA record requests, and clerical document assistance in Union City, New Jersey. English and Spanish support. Call or text 646-460-5360.",
+    "tagline": "Notary and document support, with a clear next step"
+  },
+  "common": {
+    "skip": "Skip to content",
+    "whatsapp": "WhatsApp",
+    "whatsappLong": "Message on WhatsApp",
+    "whatsappAria": "Message Jaime's Help Club on WhatsApp (opens in a new tab)",
+    "newTab": "(opens in a new tab)",
+    "whatsappGreeting": "Hello Jaime, I visited your website and would like to ask about a service.",
+    "call": "Call",
+    "callLong": "Call or text 646-460-5360",
+    "demo": "Preview",
+    "language": "Language",
+    "languageNames": {
+      "es": "Español",
+      "en": "English"
+    },
+    "backHome": "Back to home"
+  },
+  "nav": {
+    "label": "Main",
+    "footerLabel": "Site links",
+    "menu": "Menu",
+    "close": "Close menu",
+    "services": "Services",
+    "steps": "How it works",
+    "about": "About Jaime",
+    "faq": "FAQs",
+    "updates": "Guides & News",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Notary and document support, with a clear next step",
+    "lead": "Jaime Digital Notary and Jaime's Help Club provide notary and document-related assistance in Union City, New Jersey. English and Spanish support. Contact us to confirm the service, availability, and fee for your needs.",
+    "trust": [
+      "English and Spanish support",
+      "Union City & Hudson County, NJ",
+      "Clear process, no surprises"
+    ],
+    "folderTab": "Jaime's Help Club",
+    "photoAlt": "Jaime's Help Club, professional document and notary assistance",
+    "folderCaption": "Notary & Document Support · Union City, NJ"
+  },
+  "services": {
+    "title": "Services",
+    "intro": "Confirmed services for your notary and document organization needs.",
+    "tablistLabel": "Service categories",
+    "count": "{n} services",
+    "ask": "Inquire via WhatsApp",
+    "askGreeting": "Hello Jaime, I would like information regarding: {service}",
+    "showAll": "View all services",
+    "showLess": "View less",
+    "categories": {
+      "notary": "Notary Public Services",
+      "foia": "FOIA Record Requests",
+      "docprep": "Document Preparation"
+    },
+    "categoryNotes": {
+      "notary": "Official signature notarization, certified copies, and mobile notary service in Union City and nearby areas.",
+      "foia": "Assistance requesting copies of records government agencies may have about you.",
+      "docprep": "Clerical assistance to organize forms and requirements strictly according to your instructions."
+    },
+    "items": {
+      "notarizations": {
+        "name": "Standard Notarizations",
+        "desc": "In-person signing as an official witness for your documents. Please bring valid government-issued ID."
+      },
+      "mobileNotary": {
+        "name": "Mobile & Travel Notary",
+        "desc": "Convenient appointments scheduled at your home, office, or agreed location in Hudson County, NJ."
+      },
+      "certifiedCopies": {
+        "name": "Certified Copies",
+        "desc": "Document copy certifications in compliance with New Jersey notary laws and regulations."
+      },
+      "powers": {
+        "name": "Powers of Attorney & Affidavits",
+        "desc": "Notarization of powers of attorney, sworn affidavits, and official letters requiring signature."
+      },
+      "foiaRequest": {
+        "name": "FOIA Record Requests",
+        "desc": "Need copies of records an agency may have about you? We assist with preparing and filing your FOIA request."
+      },
+      "agencyFollowup": {
+        "name": "Record Organization & Follow-up",
+        "desc": "We organize agency acknowledgment receipts and records into a clear case folder for your files."
+      },
+      "formAssistance": {
+        "name": "Clerical Form Preparation",
+        "desc": "Non-legal clerical assistance filling out paperwork and forms based directly on client-provided details."
+      },
+      "checklists": {
+        "name": "Document Checklists & Review",
+        "desc": "Organized checklist review ensuring all required supporting documents and attachments are compiled."
+      }
+    }
+  },
+  "steps": {
+    "title": "How it works",
+    "intro": "Three clear steps, with zero surprises.",
+    "items": [
+      {
+        "title": "1. Tell us what service you need",
+        "body": "Call, text, or fill out the contact form sharing the notary or document service you require."
+      },
+      {
+        "title": "2. We confirm details & requirements",
+        "body": "We confirm availability, fees, appointment location, and exactly what documents or identification to bring."
+      },
+      {
+        "title": "3. We provide the agreed service",
+        "body": "We deliver the service carefully and punctually. Do not send sensitive case records through the initial contact form."
+      }
+    ]
+  },
+  "about": {
+    "title": "About Jaime",
+    "role": "Notary Public & Document Support in Union City, NJ",
+    "photoAlt": "Jaime's Help Club at the office",
+    "bio": [
+      "Jaime Polanco leads Jaime's Help Club and Jaime Digital Notary, offering dedicated notary services and clerical document assistance in Union City and Hudson County, New Jersey.",
+      "Each inquiry is handled with care and clear explanations. We walk you through every step in English or Spanish, with complete transparency and respect."
+    ],
+    "languagesLabel": "Services available in",
+    "languages": [
+      {
+        "code": "es",
+        "name": "Español"
+      },
+      {
+        "code": "en",
+        "name": "English"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "intro": "General answers regarding our notary and document services in Union City, NJ.",
+    "items": [
+      {
+        "q": "What Notary Public services do you offer in Union City, NJ?",
+        "a": "We provide signature notarizations, certified copies, sworn affidavits, and mobile travel notary services throughout Union City and Hudson County, NJ."
+      },
+      {
+        "q": "What is a FOIA immigration-record request?",
+        "a": "Need a copy of records an agency may hold about you? We help you prepare and submit a FOIA records request. This service is about requesting records; it is not a legal opinion, case strategy, or guarantee about what records show."
+      },
+      {
+        "q": "What is the difference between document preparation and legal advice?",
+        "a": "Jaime's Help Club is not a law firm. We provide clerical document organization and typing assistance based on your directions. Only a licensed attorney can provide legal advice or case representation."
+      },
+      {
+        "q": "Do you travel for mobile notary appointments?",
+        "a": "Yes, mobile appointments can be scheduled to meet at your home, workplace, or a convenient location within Union City and Hudson County."
+      },
+      {
+        "q": "What languages do you speak?",
+        "a": "We provide full bilingual assistance in both English and Spanish. Contact us in whichever language is most comfortable for you."
+      }
+    ]
+  },
+  "updates": {
+    "title": "Guides & Information",
+    "intro": "Helpful tips to keep your documents and records organized.",
+    "items": [
+      {
+        "slug": "requesting-foia-records",
+        "date": "2026-10-15",
+        "title": "How to request records through FOIA",
+        "excerpt": "Learn the basic procedure to request copies of government agency files and records."
+      },
+      {
+        "slug": "mobile-notary-nj",
+        "date": "2026-10-01",
+        "title": "Preparing for a mobile notary appointment",
+        "excerpt": "Valid ID and unsigned paperwork: what you should prepare before your notary arrives."
+      },
+      {
+        "slug": "document-organization",
+        "date": "2026-09-18",
+        "title": "The importance of keeping organized records",
+        "excerpt": "Essential advice for keeping duplicate copies and organized files for your personal records."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "intro": "Questions about a service or appointment? Reach out in English or Spanish.",
+    "form": {
+      "legend": "Contact details",
+      "name": "Full name",
+      "phone": "Phone number",
+      "phoneHint": "Example: 646-460-5360",
+      "email": "Email address",
+      "optional": "optional",
+      "service": "Service requested",
+      "servicePlaceholder": "Select a service",
+      "serviceOther": "Other / Not sure yet",
+      "message": "Short message",
+      "messageHint": "After validation, this form prepares a WhatsApp message for you to review and send. Please do not include passport numbers, A-numbers, or sensitive documents.",
+      "consent": "I agree to open WhatsApp with my inquiry details pre-filled so I can review and send them to this business. I understand this service does not provide legal advice.",
+      "honeypot": "Leave this field empty",
+      "submit": "Prepare WhatsApp message",
+      "sending": "Preparing…",
+      "success": "Your message is ready. Review it in WhatsApp and press Send to contact us.",
+      "sendWhatsApp": "Review and send in WhatsApp",
+      "errorSummary": "Please check the highlighted fields."
+    },
+    "errors": {
+      "name": "Please enter your name.",
+      "phone": "Please enter a valid phone number (e.g. 646-460-5360).",
+      "email": "Please check your email address.",
+      "service": "Please select a service.",
+      "message": "Please write a short message (at least 10 characters).",
+      "consent": "You must check the box so we can contact you."
+    },
+    "direct": {
+      "title": "Direct Contact",
+      "whatsapp": "WhatsApp",
+      "phone": "Phone / Text",
+      "email": "Email",
+      "area": "Service Area",
+      "hours": "Business Hours",
+      "rangeWord": "to"
+    }
+  },
+  "footer": {
+    "ctaTitle": "Need a notary or document assistance?",
+    "ctaBody": "Call or text us today at 646-460-5360. Bilingual support in English and Spanish.",
+    "exploreTitle": "Explore",
+    "contactTitle": "Contact",
+    "hoursTitle": "Hours",
+    "legalLine": "Jaime Digital Notary and Jaime's Help Club are not a government agency or law firm. I am not an attorney licensed to practice law and may not give legal advice about immigration or any other legal matter or accept fees for legal advice.",
+    "legalLineAlt": "Jaime Digital Notary y Jaime's Help Club no son una agencia gubernamental ni un bufete de abogados. No soy abogado con licencia para ejercer la abogacía y no puedo dar asesoramiento legal sobre inmigración ni sobre ningún otro asunto legal, ni aceptar honorarios por asesoramiento legal.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "instagram": "Instagram",
+    "rights": "All rights reserved.",
+    "credit": "Developed by"
+  },
+  "privacy": {
+    "title": "Privacy Notice",
+    "updated": "Last updated: October 2026",
+    "sections": [
+      {
+        "h": "Information We Receive",
+        "p": "The contact form asks for your name, phone number, requested service, general message, and optional email. After validation, the site prepares a WhatsApp message with those details for you to review. Please do not include passport numbers, A-numbers, or sensitive documents."
+      },
+      {
+        "h": "How We Use Information",
+        "p": "The site uses your details to prepare the message and does not send it automatically or store a copy in the application. If you choose to send it through WhatsApp, WhatsApp/Meta receives and processes it under its own privacy terms. The business does not sell your information."
+      },
+      {
+        "h": "Your Privacy Rights",
+        "p": "You can review or edit the prepared message before sending it. For questions about information you have sent to the business, contact us using the phone or WhatsApp details on this site."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "updated": "Last updated: October 2026",
+    "sections": [
+      {
+        "h": "Informational Purpose Only",
+        "p": "All content on this website is for general informational purposes. Jaime's Help Club is not a law firm and does not provide legal advice or attorney representation."
+      },
+      {
+        "h": "No Outcome Guarantees",
+        "p": "Official decisions regarding documents and filings rest exclusively with the relevant government agencies. No outcome guarantees are made."
+      },
+      {
+        "h": "Contact",
+        "p": "If you have questions regarding these terms, contact us at 646-460-5360."
+      }
+    ]
+  }
+}

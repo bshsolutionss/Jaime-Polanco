@@ -1,4 +1,4 @@
-# Lilian Reyes Paralegal & Notary Services
+# Jaime's Help Club & Digital Notary
 
 Bilingual (es/en) one-page site. Next.js 16, Tailwind v4, pnpm.
 
@@ -12,7 +12,7 @@ pnpm lint && pnpm typecheck
 
 | Env var | Meaning |
 |---|---|
-| `NEXT_PUBLIC_SITE_URL` | Public URL used for canonical, hreflang, sitemap, OG and JSON-LD |
-| `NEXT_PUBLIC_IS_DEMO` | `true` = noindex and "Demo preview" ribbon. `false` = indexable |
+| `NEXT_PUBLIC_SITE_URL` | Real public URL used for canonical, hreflang, sitemap, OG and JSON-LD before launch |
+| `NEXT_PUBLIC_IS_DEMO` | Defaults to demo/noindex. Set to `false` only with a real `NEXT_PUBLIC_SITE_URL` |
 
 Architecture and content rules are in [CLAUDE.md](CLAUDE.md).

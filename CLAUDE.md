@@ -1,8 +1,8 @@
 @AGENTS.md
 
-# Lilian Reyes site: architecture rules
+# Jaime's Help Club site: architecture rules
 
-Single-page bilingual (es/en) marketing site for a Florida paralegal and Notary Public.
+Single-page bilingual (es/en) marketing site for a New Jersey Notary Public and document-assistance business.
 It is also a **reusable template**: reskinning for another client must only touch config, messages and brand assets.
 
 ## Stack
@@ -27,21 +27,20 @@ It is also a **reusable template**: reskinning for another client must only touc
 1. **No hard-coded business text or hex colors in components.** Text comes from the dictionary (`t`), data from `siteConfig`, colors from Tailwind tokens (`ink`, `gold`, `gold-text`, `paper`, `mist`, `rule`, `muted`, `on-dark`, `whatsapp`, `error`) that map to `siteConfig.colors` via CSS variables.
 2. Adding a message key: add it to `es.json` first, then `en.json`. A missing key in `en.json` fails `tsc`.
 3. Adding a service: add the id to a category in `siteConfig.serviceCategories`, then `services.items.<id>` in both message files.
-4. `NEXT_PUBLIC_IS_DEMO=true` means noindex/nofollow, robots disallow, and a "Demo preview" ribbon. `false` makes the site indexable.
+4. Demo mode is the default when `NEXT_PUBLIC_IS_DEMO` is unset. Demo means noindex/nofollow, robots disallow, and a "Demo preview" ribbon. Set it to `false` only with a real `NEXT_PUBLIC_SITE_URL`; the app rejects the `example.com` placeholder in live mode.
 5. Components stay small and typed. No `any`. No unused code.
 6. Gold `#C9A24B` is for decoration or text on navy only. On light backgrounds use `text-gold-text` (AA).
 7. Keep it mobile-first (375px). Keep one `h1` per page and ordered headings.
 
 ## Legal and compliance (do not weaken)
-- Never use "notario", "notaria" or "notaría". Use "Notary Public" in Spanish too (Fla. Stat. s.117.05).
-- Never offer "asesoría" or legal advice; services are document *preparation and organization*.
-- No guarantees, testimonials, reviews, client counts, or government seals or logos.
-- The footer bottom bar must keep the short notice: "not a law firm" plus the s.117.05 notary sentence in BOTH English and Spanish (`footer.legalLine` / `legalLineAlt`). Its TODO for attorney review sits in `Footer.tsx`.
+- Do not imply that the business is a government agency, law firm, or attorney, and do not offer legal advice or immigration consulting. Services are document preparation and organization.
+- Because this site advertises notary services in English and Spanish, keep the New Jersey-required notary notice in both languages in the footer (`footer.legalLine` / `legalLineAlt`). Required English wording: “I am not an attorney licensed to practice law and may not give legal advice about immigration or any other legal matter or accept fees for legal advice.” See the [New Jersey Notary Public Manual](https://www.nj.gov/treasury/revenue/pdf/notarypublicmanual.pdf). Keep the Spanish translation aligned with that notice and have the business/attorney review it before launch.
+- Keep the clear “not a government agency / not a law firm” notice. Do not add guarantees, testimonials, reviews, client counts, or government seals or logos.
+- The privacy and terms pages are drafts; have the business and an attorney review them before launch.
 - Copy for asylum, TPS, visas, adjustment of status and family petitions is flagged for attorney review (see `site.ts`).
 
-## Design language: "the case folder", black and brass
-The palette comes from the real logo (black) and the client's banner (brass gold on white): ink black, brass gold,
-near-white paper and warm stone (`mist`) bands. Libre Caslon Text for headings, Hanken Grotesk for body text.
+## Design language: "the case folder", navy and amber
+The palette comes from Jaime's logo: navy, amber, white and pale blue (`mist`) bands. Oswald for section headings and Inter for body text; the hero headline also uses Inter to keep the long bilingual copy balanced.
 Recurring motifs, both taken from the logo: the diamond divider (`Ornament`) and the double ring (`SealRings`).
 Shadows are ink-tinted tokens (`--shadow-soft`, `--shadow-lift`, `--shadow-deep`, `--shadow-gold`) defined in globals.css.
 
@@ -54,16 +53,12 @@ Motion (all of it is turned off under prefers-reduced-motion):
 Don't add uppercase eyebrow labels, gradient washes, or identical card grids.
 
 ## Brand assets
-The official logo is `brand-source/logo-real.jpeg` (black). The transparent version is
-`logo-real-transparent.png`. Every web asset is generated from the transparent file, tinted to the
-brand navy (`colors.ink`) or to white:
-- `public/brand/mark.png` / `mark-light.png` hold the emblem only (LR circle, quill, stamp, scales). They are used in the header, the hero seal and the favicon.
-- `public/brand/logo-full.png` / `logo-full-light.png` hold the full lockup with the wordmark. They are used in the footer and JSON-LD.
-- `public/brand/og.png` is the white lockup on navy, 1200×630.
-- `src/app/icon.png` / `apple-icon.png` are the emblem on the paper background.
-- `public/brand/hero.jpg` is the hero portrait, cropped to 4:5 (original in `brand-source/heroimage.png`, with the Instagram tag icon cropped off).
+The original brand files are in `brand-source/`; active site assets are in `public/brand/` and referenced from `src/config/site.ts`.
+- `public/brand/jaime-logo.png` and `jaime-logo-light.png` are used on light and dark backgrounds.
+- `public/brand/hero-jaime.jpg` is the hero portrait, cropped to 4:5 from `brand-source/heroimage.png`.
+- `public/brand/og.png` is the social preview image; `src/app/icon.png` and `apple-icon.png` are the site icons.
 
-The old gold-swoosh "LR" files in `brand-source/` (`logo.png`, `logo_bg_re.png`) are **not** the real logo. Don't use them.
+The old “LR” logo files in `brand-source/` belong to the previous client and must not be used for Jaime's site.
 To reskin, replace these files and update the sizes in `siteConfig.logo`.
 
 ## Checks before finishing

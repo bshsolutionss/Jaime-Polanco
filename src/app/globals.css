@@ -1,0 +1,296 @@
+@import "tailwindcss";
+
+/*
+ * Brand colors come from src/config/site.ts (siteConfig.colors), written as
+ * --brand-* variables by the root layout. Don't hard-code hex values here.
+ */
+@theme inline {
+  --color-ink: var(--brand-ink);
+  --color-ink-deep: var(--brand-ink-deep);
+  --color-gold: var(--brand-gold);
+  --color-gold-text: var(--brand-gold-text);
+  --color-paper: var(--brand-paper);
+  --color-mist: var(--brand-mist);
+  --color-rule: var(--brand-rule);
+  --color-muted: var(--brand-muted);
+  --color-whatsapp: var(--brand-whatsapp);
+  --color-error: var(--brand-error);
+  --color-on-dark: var(--brand-on-dark);
+
+  --font-serif: var(--font-oswald), "Oswald", Impact, "Arial Narrow", sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  /* Layered shadows tinted with the brand ink, so they read as depth rather than grey smudges. */
+  --shadow-soft:
+    0 1px 2px color-mix(in oklab, var(--brand-ink) 6%, transparent),
+    0 8px 24px -12px color-mix(in oklab, var(--brand-ink) 18%, transparent);
+  --shadow-lift:
+    0 2px 4px color-mix(in oklab, var(--brand-ink) 6%, transparent),
+    0 24px 48px -20px color-mix(in oklab, var(--brand-ink) 32%, transparent);
+  --shadow-deep:
+    0 4px 8px color-mix(in oklab, var(--brand-ink) 10%, transparent),
+    0 40px 80px -30px color-mix(in oklab, var(--brand-ink) 55%, transparent);
+  --shadow-gold: 0 10px 30px -12px color-mix(in oklab, var(--brand-gold) 70%, transparent);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Sticky header is 4.5rem tall. */
+  [id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold-text);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .on-dark :focus-visible {
+    outline-color: var(--color-gold);
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+@layer components {
+  /* Buttons lift on hover; the primary one catches a slow brass sheen. */
+  .btn-lift {
+    transition:
+      transform 200ms ease,
+      box-shadow 200ms ease,
+      background-color 200ms ease,
+      color 200ms ease;
+  }
+
+  .btn-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lift);
+  }
+
+  .btn-sheen {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .btn-sheen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      100deg,
+      transparent 25%,
+      color-mix(in oklab, white 45%, transparent) 50%,
+      transparent 75%
+    );
+    transform: translateX(-120%);
+    transition: transform 600ms ease;
+  }
+
+  .btn-sheen:hover::after {
+    transform: translateX(120%);
+  }
+
+  /* Cards that rise slightly when pointed at. */
+  .card-lift {
+    box-shadow: var(--shadow-soft);
+    transition:
+      transform 250ms ease,
+      box-shadow 250ms ease,
+      border-color 250ms ease;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+/* ---------- Hero entrance: one orchestrated sequence, transform-only so it never delays paint. */
+
+@keyframes line-rise {
+  from {
+    transform: translateY(105%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rule-draw {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes frame-in {
+  from {
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    transform: none;
+  }
+}
+
+/* The monogram is pressed onto the portrait like an embosser. */
+@keyframes press {
+  0% {
+    transform: scale(1.25) rotate(-8deg);
+  }
+  60% {
+    transform: scale(0.96) rotate(0deg);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fab-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--brand-whatsapp) 55%, transparent);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 16px transparent;
+  }
+}
+
+.hero-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+}
+
+.hero-line > span {
+  display: block;
+  animation: line-rise 800ms cubic-bezier(0.2, 0.7, 0.1, 1) both;
+}
+
+.rule-draw {
+  transform-origin: left;
+  animation: rule-draw 900ms cubic-bezier(0.2, 0.7, 0.1, 1) 350ms both;
+}
+
+.frame-in {
+  animation: frame-in 1000ms cubic-bezier(0.2, 0.7, 0.1, 1) 150ms both;
+}
+
+.seal-press {
+  animation: press 900ms cubic-bezier(0.2, 0.7, 0.2, 1) 700ms both;
+}
+
+.spin-slow {
+  animation: spin-slow 90s linear infinite;
+}
+
+.fab-pulse {
+  animation: fab-pulse 2.6s ease-out 2s infinite;
+}
+
+/* Services: the newly selected panel settles in, its cards follow in a short cascade. */
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.panel-in:not([hidden]) {
+  animation: panel-in 400ms cubic-bezier(0.2, 0.7, 0.1, 1) both;
+}
+
+.panel-in:not([hidden]) .card-in {
+  animation: panel-in 500ms cubic-bezier(0.2, 0.7, 0.1, 1) var(--card-delay, 0ms) both;
+}
+
+/* ---------- Scroll reveal: pure CSS scroll-driven animation, no JavaScript, so it can't cause hydration
+   mismatches. Browsers without animation-timeline support (and reduced-motion users) just see the content.
+   Stagger siblings with style="--reveal-index: n". */
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      animation-range: entry calc(var(--reveal-index, 0) * 6%) entry calc(55% + var(--reveal-index, 0) * 6%);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-line > span,
+  .rule-draw,
+  .frame-in,
+  .seal-press,
+  .spin-slow,
+  .fab-pulse,
+  .panel-in:not([hidden]),
+  .panel-in:not([hidden]) .card-in {
+    animation: none;
+  }
+
+  .btn-lift:hover,
+  .card-lift:hover {
+    transform: none;
+  }
+
+  .btn-sheen::after {
+    display: none;
+  }
+}
