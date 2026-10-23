@@ -20,10 +20,10 @@ export function Hero({ t }: { t: Dictionary }) {
         <div>
           <h1
             id="hero-title"
-            className="max-w-[10ch] text-[2.9rem] leading-[1.02] tracking-[-0.015em] text-ink sm:text-6xl lg:text-[4.75rem]"
+            className="text-[2.65rem] leading-[1.04] tracking-[-0.015em] text-ink sm:text-6xl lg:text-[4.25rem]"
           >
             {lines.map((line) => (
-              <span key={line} className="hero-line">
+              <span key={line} className="hero-line sm:whitespace-nowrap">
                 <span>{line}</span>
               </span>
             ))}
