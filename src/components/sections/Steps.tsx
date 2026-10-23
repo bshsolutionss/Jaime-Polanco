@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Steps({ t }: { t: Dictionary }) {
   return (
-    <section id={sectionIds.steps} aria-labelledby="steps-title" className="bg-ink py-24 sm:py-28">
+    <section id={sectionIds.steps} aria-labelledby="steps-title" className="bg-ink py-16 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading id="steps-title" title={t.steps.title} intro={t.steps.intro} onDark />
         <ol className="relative mt-16 grid gap-14 md:grid-cols-3 md:gap-10">

@@ -5,7 +5,7 @@ import { Ornament, SealRings } from "@/components/ui/Ornament";
 
 export function About({ t }: { t: Dictionary }) {
   return (
-    <section id={sectionIds.about} aria-labelledby="about-title" className="bg-mist py-24 sm:py-28">
+    <section id={sectionIds.about} aria-labelledby="about-title" className="bg-mist py-16 sm:py-24 lg:py-28">
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-4 sm:px-6 md:grid-cols-[5fr_7fr] md:gap-16">
         {/* Brand plaque; add a second portrait here if the client supplies one. */}
         <div

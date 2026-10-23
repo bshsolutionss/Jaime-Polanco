@@ -21,7 +21,7 @@ export function Services({ t }: { t: Dictionary }) {
   }));
 
   return (
-    <section id={sectionIds.services} aria-labelledby="services-title" className="bg-mist py-20 sm:py-28">
+    <section id={sectionIds.services} aria-labelledby="services-title" className="bg-mist py-16 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading id="services-title" title={services.title} intro={services.intro} />
         <ServiceTabs

@@ -6,7 +6,7 @@ import { formatDate, getUpdates } from "@/lib/updates";
 
 export function Updates({ locale, t }: { locale: Locale; t: Dictionary }) {
   return (
-    <section id={sectionIds.updates} aria-labelledby="updates-title" className="bg-mist py-24 sm:py-28">
+    <section id={sectionIds.updates} aria-labelledby="updates-title" className="bg-mist py-16 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading id="updates-title" title={t.updates.title} intro={t.updates.intro} />
         <ul className="mt-14 grid gap-6 md:grid-cols-3">

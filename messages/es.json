@@ -12,7 +12,7 @@
     "newTab": "(se abre en una pestaña nueva)",
     "whatsappGreeting": "Hola Jaime, vi su página y quisiera consultar sobre un servicio.",
     "call": "Llamar",
-    "callLong": "Llamar o enviar mensaje al 646-460-5360",
+    "callLong": "Llamar al 646-460-5360",
     "demo": "Vista previa",
     "language": "Idioma",
     "languageNames": {
@@ -34,14 +34,14 @@
     "contact": "Contacto"
   },
   "hero": {
-    "title": "Notaría y apoyo con documentos, con un próximo paso claro",
-    "lead": "Jaime Digital Notary y Jaime's Help Club ofrecen servicios notariales y asistencia con documentos en Union City, Nueva Jersey. Atención en inglés y español. Contáctenos para confirmar el servicio, la disponibilidad y el costo según lo que necesita.",
+    "title": "Tu trámite, nuestra prioridad",
+    "lead": "Notary Public y ayuda con documentos en Union City, New Jersey. Te atendemos en español y en inglés.",
     "trust": [
       "Atención en inglés y español",
       "Union City y Hudson County, NJ",
       "Proceso claro y sin sorpresas"
     ],
-    "folderTab": "Jaime's Help Club",
+    "folderTab": "Expediente",
     "photoAlt": "Jaime's Help Club, atención profesional y personalizada",
     "folderCaption": "Notary & Document Support · Union City, NJ"
   },

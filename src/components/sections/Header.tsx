@@ -26,7 +26,7 @@ export function Header({ locale, t }: { locale: Locale; t: Dictionary }) {
             height={siteConfig.logo.mark.height}
             alt={siteConfig.legalName}
             priority
-            className="h-14 w-auto sm:h-16"
+            className="h-12 w-auto sm:h-16"
           />
         </a>
 
@@ -48,10 +48,10 @@ export function Header({ locale, t }: { locale: Locale; t: Dictionary }) {
             href={whatsappHref(t.common.whatsappGreeting)}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-lift inline-flex h-10 items-center gap-2 rounded-md bg-ink px-3 text-sm font-semibold text-white hover:bg-ink-deep sm:px-4"
+            className="btn-lift inline-flex h-10 w-10 items-center justify-center gap-2 rounded-md bg-ink px-0 text-sm font-semibold text-white hover:bg-ink-deep sm:w-auto sm:justify-start sm:px-4"
           >
             <Icon name="whatsapp" className="size-[18px] text-gold" />
-            {t.common.whatsapp}
+            <span className="sr-only sm:not-sr-only">{t.common.whatsapp}</span>
             <span className="sr-only"> {t.common.newTab}</span>
           </a>
           <MobileMenu links={links} openLabel={t.nav.menu} closeLabel={t.nav.close} navLabel={t.nav.label} />

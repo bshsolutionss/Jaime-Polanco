@@ -8,15 +8,13 @@ import { WhatsAppFab } from "@/components/ui/WhatsAppFab";
 import { DemoRibbon } from "@/components/ui/DemoRibbon";
 import "../globals.css";
 
-// Oswald: Bold condensed section headings matching the logo's strong lettering.
 const oswald = Oswald({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-oswald",
   display: "swap",
 });
 
-// Inter: Modern, clean body text that pairs well with Oswald.
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",

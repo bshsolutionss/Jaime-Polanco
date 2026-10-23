@@ -87,9 +87,9 @@ export function ContactForm({ t, services, whatsappNumber, whatsappGreeting, new
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn-lift btn-sheen inline-flex min-h-12 items-center justify-center rounded-md bg-whatsapp px-6 text-base font-semibold text-white shadow-[var(--shadow-soft)] hover:brightness-110"
+          className="btn-lift btn-sheen flex min-h-12 w-full min-w-0 items-center justify-center rounded-md bg-whatsapp px-4 text-center text-base font-semibold leading-snug text-white shadow-[var(--shadow-soft)] hover:brightness-110 sm:w-auto sm:px-6"
         >
-          {form.sendWhatsApp}
+          <span className="min-w-0">{form.sendWhatsApp}</span>
           <span className="sr-only"> {newTabLabel}</span>
         </a>
       )}

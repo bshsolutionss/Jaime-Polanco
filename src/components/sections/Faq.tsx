@@ -6,7 +6,7 @@ import { Icon } from "@/components/ui/Icon";
 /** Native <details>/<summary>: keyboard operable and announced correctly with no JS. */
 export function Faq({ t }: { t: Dictionary }) {
   return (
-    <section id={sectionIds.faq} aria-labelledby="faq-title" className="py-24 sm:py-28">
+    <section id={sectionIds.faq} aria-labelledby="faq-title" className="py-16 sm:py-24 lg:py-28">
       <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[4fr_7fr] lg:gap-16">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <SectionHeading id="faq-title" title={t.faq.title} intro={t.faq.intro} />
@@ -20,7 +20,7 @@ export function Faq({ t }: { t: Dictionary }) {
                   <Icon name="plus" className="size-4" />
                 </span>
               </summary>
-              <p className="max-w-[62ch] pb-7 pr-12 text-[1.05rem] leading-relaxed text-muted">{item.a}</p>
+              <p className="max-w-[62ch] pb-7 pr-0 text-[1.05rem] leading-relaxed text-muted sm:pr-12">{item.a}</p>
             </details>
           ))}
         </div>

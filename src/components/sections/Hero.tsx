@@ -5,30 +5,35 @@ import { CallLink, WhatsAppLink } from "@/components/ui/ContactLinks";
 import { Ornament, SealRings } from "@/components/ui/Ornament";
 
 export function Hero({ t }: { t: Dictionary }) {
+  // Split after the comma so each half can rise in on its own line.
+  const lines = t.hero.title.split(/(?<=,)\s+/);
+
   return (
-    <section aria-labelledby="hero-title" className="relative overflow-hidden bg-gradient-to-br from-white via-mist to-white">
-      {/* Amber glow behind the portrait, matching the logo's top chevron */}
+    <section aria-labelledby="hero-title" className="relative overflow-hidden">
+      {/* Soft amber light behind the portrait */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-40 top-10 size-[44rem] rounded-full bg-[radial-gradient(closest-side,color-mix(in_oklab,var(--color-gold)_18%,transparent),transparent)] max-lg:-right-64 max-lg:top-[34rem]"
+        className="pointer-events-none absolute -right-40 top-10 size-[44rem] rounded-full bg-[radial-gradient(closest-side,color-mix(in_oklab,var(--color-gold)_20%,transparent),transparent)] max-lg:-right-64 max-lg:top-[34rem]"
       />
 
       <div className="relative mx-auto grid max-w-6xl gap-16 px-4 pb-20 pt-12 sm:px-6 sm:pt-20 lg:grid-cols-[1.12fr_0.88fr] lg:items-center lg:gap-14 lg:pb-28">
         <div>
           <h1
             id="hero-title"
-            className="font-sans text-[2.85rem] font-bold leading-[1.05] tracking-tight text-ink sm:text-[3.5rem]"
+            className="max-w-[10ch] text-[2.9rem] leading-[1.02] tracking-[-0.015em] text-ink sm:text-6xl lg:text-[4.75rem]"
           >
-            <span className="hero-line">
-              <span>{t.hero.title}</span>
-            </span>
+            {lines.map((line) => (
+              <span key={line} className="hero-line">
+                <span>{line}</span>
+              </span>
+            ))}
           </h1>
           <Ornament className="rule-draw mt-7" />
-          <p className="mt-7 max-w-[52ch] text-lg leading-relaxed text-muted sm:text-xl">{t.hero.lead}</p>
+          <p className="mt-7 max-w-[38ch] text-lg leading-relaxed text-muted sm:text-xl">{t.hero.lead}</p>
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <WhatsAppLink
-              variant="gold"
+              variant="primary"
               greeting={t.common.whatsappGreeting}
               label={t.common.whatsappLong}
               newTabLabel={t.common.newTab}

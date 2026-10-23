@@ -15,7 +15,7 @@ export function Contact({ locale, t }: { locale: Locale; t: Dictionary }) {
   const { direct } = t.contact;
 
   return (
-    <section id={sectionIds.contact} aria-labelledby="contact-title" className="py-24 sm:py-28">
+    <section id={sectionIds.contact} aria-labelledby="contact-title" className="py-16 sm:py-24 lg:py-28">
       <div className="mx-auto grid max-w-6xl gap-14 px-4 sm:px-6 lg:grid-cols-[7fr_5fr] lg:gap-16">
         <div>
           <SectionHeading id="contact-title" title={t.contact.title} intro={t.contact.intro} />

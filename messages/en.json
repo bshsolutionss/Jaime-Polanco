@@ -12,7 +12,7 @@
     "newTab": "(opens in a new tab)",
     "whatsappGreeting": "Hello Jaime, I visited your website and would like to ask about a service.",
     "call": "Call",
-    "callLong": "Call or text 646-460-5360",
+    "callLong": "Call 646-460-5360",
     "demo": "Preview",
     "language": "Language",
     "languageNames": {
@@ -34,14 +34,14 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Notary and document support, with a clear next step",
-    "lead": "Jaime Digital Notary and Jaime's Help Club provide notary and document-related assistance in Union City, New Jersey. English and Spanish support. Contact us to confirm the service, availability, and fee for your needs.",
+    "title": "Your process, our priority",
+    "lead": "Notary Public and document assistance in Union City, New Jersey. English and Spanish support.",
     "trust": [
       "English and Spanish support",
       "Union City & Hudson County, NJ",
       "Clear process, no surprises"
     ],
-    "folderTab": "Jaime's Help Club",
+    "folderTab": "Case File",
     "photoAlt": "Jaime's Help Club, professional document and notary assistance",
     "folderCaption": "Notary & Document Support · Union City, NJ"
   },
